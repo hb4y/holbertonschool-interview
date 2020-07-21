@@ -6,16 +6,18 @@ Return True if all boxes can be opened, else return False
 
 
 def canUnlockAll(boxes):
-    if boxes:
-        openBoxes = set()
-        openBoxes.add(0)
+    openBoxes = set()
+    openBoxes.add(0)
 
-        def unlockBox(box):
-            for key in box:
-                if (key not in openBoxes) and (key < len(boxes)):
-                    openBoxes.add(key)
-                    unlockBox(boxes[key])
+    def unlockBox(box):
+        for key in box:
+            if (key not in openBoxes) and (key < len(boxes)):
+                openBoxes.add(key)
+                unlockBox(boxes[key])
+    if boxes:
         unlockBox(boxes[0])
-        if len(openBoxes) == len(boxes):
-            return True
+    else:
+        return True
+    if len(openBoxes) == len(boxes):
+        return True
     return False
