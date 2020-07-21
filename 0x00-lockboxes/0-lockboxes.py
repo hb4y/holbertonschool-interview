@@ -14,10 +14,8 @@ def canUnlockAll(boxes):
             if (key not in openBoxes) and (key < len(boxes)):
                 openBoxes.add(key)
                 unlockBox(boxes[key])
-    if boxes:
+    if boxes and len(boxes) > 0:
         unlockBox(boxes[0])
-    else:
-        return True
-    if len(openBoxes) == len(boxes):
-        return True
+        if len(openBoxes) == len(boxes):
+            return True
     return False
