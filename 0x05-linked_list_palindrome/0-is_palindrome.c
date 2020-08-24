@@ -23,7 +23,7 @@ listint_t *reverse(listint_t *head)
 }
 
 /**
- * is_palindrome - frees a listint_t list
+ * is_palindrome - check if listint_t is palindrome
  * @head: pointer to list
  * Return: 0 is not palindrome 1 if palimdrome
  */
@@ -46,7 +46,7 @@ int is_palindrome(listint_t **head)
 	slow = reverse(slow);
 	fast = *head;
 
-	while (!slow)
+	while (slow)
 	{
 		if (slow->n != fast->n)
 			return (0);
