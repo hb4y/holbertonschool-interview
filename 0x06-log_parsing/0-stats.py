@@ -17,7 +17,6 @@ def _print(file_size, status):
             print("{}: {}".format(key, status[key]))
 
 
-
 def parser(log, counter, file_size, status):
     try:
         if log[8].isdigit():
