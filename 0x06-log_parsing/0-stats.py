@@ -44,11 +44,7 @@ if __name__ == "__main__":
     while True:
         try:
             log = input().split()
-            if log:
-                parser(log, counter, file_size, status)
-            else:
-                _print(file_size, status)
-                exit()
-        except KeyboardInterrupt:
+            parser(log, counter, file_size, status)
+        except (KeyboardInterrupt, EOFError):
             _print(file_size, status)
             exit()
