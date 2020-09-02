@@ -11,13 +11,11 @@ import sys
 
 
 def _print(file_size, status):
-    try:
-        print("File size: {}".format(file_size[0]))
-        for key in sorted(status.keys()):
-            if status[key] != 0:
-                print("{}: {}".format(key, status[key]))
-    except:
-        pass
+    print("File size: {}".format(file_size[0]))
+    for key in sorted(status.keys()):
+        if status[key] != 0:
+            print("{}: {}".format(key, status[key]))
+
 
 
 def parser(log, counter, file_size, status):
