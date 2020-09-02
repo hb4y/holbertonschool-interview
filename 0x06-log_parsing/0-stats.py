@@ -19,11 +19,11 @@ def _print(file_size, status):
 
 def parser(log, counter, file_size, status):
     try:
-        if log[8].isdigit():
-            file_size[0] += int(log[8])
+        if log[-1].isdigit():
+            file_size[0] += int(log[-1])
 
-        if log[7].isdigit():
-            status[int(log[7])] += 1
+        if log[-2].isdigit():
+            status[int(log[-2])] += 1
 
         if counter[0] == 9:
             _print(file_size, status)
