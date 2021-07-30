@@ -8,6 +8,7 @@
 avl_t *new_alv_node(int n)
 {
 	avl_t *new_node = NULL;
+
 	new_node = malloc(sizeof(avl_t));
 	if (!new_node)
 		return (NULL);
