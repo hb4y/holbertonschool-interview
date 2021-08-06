@@ -26,10 +26,12 @@ if __name__ == '__main__':
         sys.exit(1)
 
     chest_board = [[0 for col in range(n_queen)] for row in range(n_queen)]
+
     def main():
         b = [[0 for j in range(n_queen)] for i in range(n_queen)]
         recursive_func(b, 0)
         return
+
     def recursive_func(b, c):
         if (c == n_queen):
             solution(b)
@@ -61,6 +63,7 @@ if __name__ == '__main__':
             i = i + 1
             j = j - 1
         return True
+
     def solution(b):
         solve = []
         for i in range(n_queen):
