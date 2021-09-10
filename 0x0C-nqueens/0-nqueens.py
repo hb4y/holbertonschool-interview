@@ -73,5 +73,4 @@ if __name__ == '__main__':
                     solve.append([i, j])
         print(solve)
         solve.clear()
-
     main()
