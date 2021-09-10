@@ -15,10 +15,7 @@ def artic(subreddit, w_list, words_aux, words_aux_2, after="",):
     """ Process articles """
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     url += "?limit=100&after={}".format(after)
-    res = requests.get(url,
-                            allow_redirects=False,
-                            headers={'User-agent': 'holii'}
-                            )
+    res = requests.get(url, allow_redirects=False, headers={'User-agent': 'h'})
 
     if res.status_code != 200:
         return None
